@@ -60,6 +60,6 @@ crashlytics-build.properties
 
 
 Thumbs.db
-DotProduct/Library/
-DotProduct/Temp/
-DotProduct/Logs/
+TotW/Library/
+TotW/Temp/
+TotW/Logs/
