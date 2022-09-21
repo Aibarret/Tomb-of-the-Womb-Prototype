@@ -7,6 +7,7 @@ public class Gamer : MonoBehaviour
     public int TILESIZE = 1;
     public int[,] grid = new int[16, 10];
     public GameObject player;
+    public GameObject[] enemies;
 
     private void Start()
     {
@@ -65,7 +66,12 @@ public class Gamer : MonoBehaviour
 
     public void planPhase()
     {
-        print("Enemy Sets target!");
+        int i = 0;
+        while (i < enemies.Length)
+        {
+            enemies[i].GetComponent<Enemy>().makePlan();
+            i++;
+        }
         actPhase();
     }
 
@@ -76,7 +82,12 @@ public class Gamer : MonoBehaviour
 
     public void resolvePhase()
     {
-        print("Enemy Target Resolves!");
+        int i = 0;
+        while (i < enemies.Length)
+        {
+            enemies[i].GetComponent<Enemy>().resolveAction();
+            i++;
+        }
         planPhase();
     }
 
