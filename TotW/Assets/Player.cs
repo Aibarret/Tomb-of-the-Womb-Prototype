@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
     public GameObject game;
 
     private bool acting = false;
+    public int[] space = new int[2] { 5, 5 };
 
     private void Start()
     {
